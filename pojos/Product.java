@@ -3,9 +3,11 @@ package pojos;
 import java.time.LocalDate;
 import javax.persistence.*;
 
+//Class lvl anno.
 @Entity 
 @Table(name = "products") 
 public class Product {
+	//field lvl anno. 
 	@Id 
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name="product_id")
@@ -99,5 +101,4 @@ public class Product {
 		return "Product [productId=" + productId + ", name=" + name + ", category=" + category + ", price=" + price
 				+ ", stock=" + stock + ", productDesc=" + productDesc + ", manufactureDate=" + manufactureDate + "]";
 	}
-
 }
