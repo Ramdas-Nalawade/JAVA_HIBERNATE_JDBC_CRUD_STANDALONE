@@ -4,14 +4,10 @@ package pojos;
 import java.time.LocalDate;
 import javax.persistence.*;
 
-@Entity // cls level run time anno to tell hibernate , following class is an entity to
-		// be managed by hibernate.
-@Table(name = "products") // table name
+@Entity 
+@Table(name = "products") 
 public class Product {
-	@Id // constraint PK
-	// to specify auto generation of PKs : def strategy : AUTO
-	// replaced by IDENTITY => auto increment constraint 
-	//will be added on the column (BEST suitable for Mysql DB)
+	@Id 
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name="product_id")
 	private Integer productId;
