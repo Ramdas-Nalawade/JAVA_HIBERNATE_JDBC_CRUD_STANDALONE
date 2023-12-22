@@ -1,5 +1,4 @@
 package pojos;
-//products table : id , name, category, price,stock,desc,manu_date
 
 import java.time.LocalDate;
 import javax.persistence.*;
