@@ -19,9 +19,7 @@ public class AddProduct {
 					"Enter product details  : name,  category,  " + "price,  stock,  productDesc, manufactureDate ");
 			Product p = new Product(sc.next(), ProductCategory.valueOf(sc.next().toUpperCase()), sc.nextDouble(),
 					sc.nextInt(), sc.next(), LocalDate.parse(sc.next()));
-			//create dao instance
 			ProductDaoImpl dao=new ProductDaoImpl();
-			//invoke dao's method
 			System.out.println(dao.addNewProduct(p));
 		} catch (Exception e) {
 			e.printStackTrace();
