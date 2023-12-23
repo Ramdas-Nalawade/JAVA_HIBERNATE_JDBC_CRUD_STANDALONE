@@ -15,9 +15,7 @@ public class GetAllProducts {
 
 	public static void main(String[] args) {
 		try (SessionFactory sf = getFactory()) {
-			//create dao instance
 			ProductDaoImpl dao=new ProductDaoImpl();
-			//invoke dao's method
 			dao.getAllProducts().forEach(System.out::println);
 		} catch (Exception e) {
 			e.printStackTrace();
